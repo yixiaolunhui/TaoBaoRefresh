@@ -17,8 +17,6 @@ import android.view.View;
 
 public class TaoBaoView  extends View{
 
-    //圆环的颜色
-    private int ringColor;
 
     //圆环进度颜色
     private int ringProgressColor;
@@ -68,7 +66,6 @@ public class TaoBaoView  extends View{
     public TaoBaoView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         TypedArray typedArray=context.obtainStyledAttributes(attrs,R.styleable.TaoBaoView);
-        ringColor=typedArray.getColor(R.styleable.TaoBaoView_ringColor, Color.GRAY);
         ringProgressColor=typedArray.getColor(R.styleable.TaoBaoView_ringProgressColor, Color.GRAY);
         ringWidth=typedArray.getDimension(R.styleable.TaoBaoView_ringWidth, 5);
         ringMax=typedArray.getInteger(R.styleable.TaoBaoView_ringmax, 50);

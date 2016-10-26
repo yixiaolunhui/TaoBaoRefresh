@@ -3,7 +3,6 @@ package com.dalong.taobaorefresh;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
@@ -11,7 +10,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.dalong.refreshlayout.OnFooterListener;
-import com.dalong.refreshlayout.OnHeaderListener;
 import com.dalong.refreshlayout.RefreshStatus;
 
 /**
@@ -37,28 +35,7 @@ public class TaoBaoFooter extends LinearLayout implements OnFooterListener {
         LinearInterpolator lir = new LinearInterpolator();
         refreshingAnimation.setInterpolator(lir);
         taobaoView.setProgress(90);
-        measureView(taobaoHeader);
     }
-
-    private void measureView(View child) {
-        ViewGroup.LayoutParams p = child.getLayoutParams();
-        if (p == null) {
-            p = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT);
-        }
-        int childWidthSpec = ViewGroup.getChildMeasureSpec(0, 0 + 0, p.width);
-        int lpHeight = p.height;
-        int childHeightSpec;
-        if (lpHeight > 0) {
-            childHeightSpec = MeasureSpec.makeMeasureSpec(lpHeight,
-                    MeasureSpec.EXACTLY);
-        } else {
-            childHeightSpec = MeasureSpec.makeMeasureSpec(0,
-                    MeasureSpec.UNSPECIFIED);
-        }
-        child.measure(childWidthSpec, childHeightSpec);
-    }
-
 
 
     public void refreshStatus(RefreshStatus status){

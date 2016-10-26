@@ -12,7 +12,6 @@
         app:ringWidth="1dp"
         app:ringmax="100"
         app:ringImage="@mipmap/jiantou"
-        app:ringColor="@android:color/transparent"
         app:ringProgressColor="@android:color/darker_gray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
