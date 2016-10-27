@@ -1,27 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
-    android:padding="10dp"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
     android:gravity="center"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
-    <com.dalong.taobaorefresh.TaoBaoView
-        android:id="@+id/taobao_view"
-        app:ringWidth="1dp"
-        app:ringmax="100"
-        app:ringImage="@mipmap/jiantou"
-        app:ringProgressColor="@android:color/darker_gray"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:src="@mipmap/uik_list_logo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/taobao_tv"
-        android:textSize="14sp"
-        android:textColor="@android:color/darker_gray"
-        android:layout_marginLeft="15dp"
-        android:gravity="center_vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/refresh_header_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.dalong.taobaorefresh.TaoBaoView
+            android:id="@+id/taobao_view"
+            app:ringWidth="1dp"
+            app:ringmax="100"
+            app:ringImage="@mipmap/jiantou"
+            app:ringProgressColor="@android:color/darker_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/taobao_tv"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
 </LinearLayout>
